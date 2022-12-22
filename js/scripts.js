@@ -15,7 +15,6 @@
       infinite: true,
       arrows: true,
       adaptiveHeight: true,
-      fade: true,
       responsive: [
         {
           breakpoint: 769,
@@ -24,6 +23,15 @@
           },
         },
       ],
+    });
+
+    $('.depoimentos').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      dots: false,
+      infinite: true,
+      arrows: true
     });
 
     /* fancybox */

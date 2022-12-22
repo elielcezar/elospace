@@ -34,8 +34,7 @@
 
   <div class="top-message">
     <div class="container">
-      <p>Escritório Virtual | garanta endereço fiscal, endereço comercial e gestão de correspondências no maior coworking em Curitiba! A partir de R$ 89/mês na modalidade anual (pagamento único de R$ 1.070,00)</p>
-      <a href="#" class="btn">Acesse</a>
+      <p>Escritório Virtual | garanta endereço fiscal, endereço comercial e gestão de correspondências no maior coworking em Curitiba! A partir de R$ 89/mês na modalidade anual (pagamento único de R$ 1.070,00) <a href="#" class="btn">Saiba Mais</a></p>
     </div>
   </div>
 
@@ -52,6 +51,7 @@
 
   <header>
     <div class="container">
+      <h1>EloSpace</h1>
       <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
     </div>
   </header>

@@ -8,14 +8,14 @@ Template Name: Contato
 <div id="principal">
 
   <div class="container">
-    <div class="coluna-1">
-      <?php echo do_shortcode('[contact-form-7 id="7810" title="Contato"]'); ?>
-    </div>
-    <div class="coluna-2">
+    <div class="col-1">
+      <h3>Quer saber mais sobre os planos e serviços?</h3>
       <p>Você pode entrar em contato conosco pelo e-mail:</p>
-      <p>escreva@litercultura.com.br</p>
-      <p>Pela nossa página no Facebook:</p>
-      <p><a href="http://www.facebook.com.br/litercultura">http://www.facebook.com.br/litercultura</a> </p>
+      <p>contato@elospace.com.br</p>
+      <p>ou se preferir, pelo whatsapp: 41 98785-1957</p>
+    </div>
+    <div class="col-2">
+      <?php echo do_shortcode('[contact-form-7 id="14" title="Formulário de contato"]'); ?>
     </div>
   </div>
 
