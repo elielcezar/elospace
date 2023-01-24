@@ -4,30 +4,40 @@
   </div>
   <div class="container">
     <div class="col-1">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-rodape.png" alt="">
+      <a href="<?php echo site_url(); ?>">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-rodape.png" alt="">
+      </a>
+      <p>Av.Anita Garibaldi, 850, Ed.Infinity,<br />
+        Torre Sucesso, Sala 103,
+        Curitiba -PR</p>
+      <p>comercial@elospace.com.br</p>
+      <p>41 98785-1957</p>
     </div>
     <div class="col-2">
       <h5>Serviços</h5>
       <ul class="menu">
-        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-29"><a href="http://127.0.0.1/elospace/" aria-current="page">Home</a></li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-produto menu-item-33"><a href="http://127.0.0.1/elospace/produto/espaco-compartilhado/">Espaço Compartilhado</a></li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-produto menu-item-32"><a href="http://127.0.0.1/elospace/produto/salas-privativas/">Salas Privativas</a></li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="http://127.0.0.1/elospace/cursos/">Cursos</a></li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://127.0.0.1/elospace/eventos/">Eventos</a></li>
-        <li class="menu-item menu-item-type-post_type menu-item-object-produto menu-item-31"><a href="http://127.0.0.1/elospace/produto/endereco-comercial-fiscal/">Endereço Comercial/Fiscal</a></li>
+        <li><a href="<?php echo site_url(); ?>" aria-current="page">Home</a></li>
+        <li><a href="<?php echo site_url(); ?>/produto/espaco-compartilhado/">Espaço Compartilhado</a></li>
+        <li><a href="<?php echo site_url(); ?>/produto/salas-privativas/">Salas Privativas</a></li>
+        <li><a href="<?php echo site_url(); ?>/cursos/">Cursos</a></li>
+        <li><a href="<?php echo site_url(); ?>/eventos/">Eventos</a></li>
+        <li><a href="<?php echo site_url(); ?>/produto/endereco-comercial-fiscal/">Endereço Comercial/Fiscal</a></li>
+        <li><a href="<?php echo site_url(); ?>/produto/produto/sala-de-reunioes/">Sala de Reuniões</a></li>
       </ul>
     </div>
     <div class="col-3">
       <h5>Institucional</h5>
       <ul>
         <li><a href="#">Sobre a Elospace</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="<?php echo site_url(); ?>/contato/">Contato</a></li>
       </ul>
     </div>
     <div class="col-4">
       <h5>Acompanhe</h5>
-      <ul>
-        <li><a href="#">LinkedIn</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></li>
+      <ul class="social">
+        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
       </ul>
     </div>
   </div>

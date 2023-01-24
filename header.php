@@ -11,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <link href="<?php echo get_stylesheet_directory_uri(); ?>/fontawesome/css/all.css" rel="stylesheet">
 
@@ -34,7 +34,7 @@
 
   <div class="top-message">
     <div class="container">
-      <p>Escritório Virtual | garanta endereço fiscal, endereço comercial e gestão de correspondências no maior coworking em Curitiba! A partir de R$ 89/mês na modalidade anual (pagamento único de R$ 1.070,00) <a href="#" class="btn">Saiba Mais</a></p>
+      <p>Escritório Virtual - Endereço Fiscal e Endereço Comercial no melhor coworking em Curitiba! A partir de R$ 79/mês* na modalidade anual (pagamento único de R$ 950,00*). <a href="<?php echo site_url(); ?>/contato" class="btn">Saiba Mais</a></p>
     </div>
   </div>
 
@@ -51,7 +51,7 @@
 
   <header>
     <div class="container">
-      <h1>EloSpace</h1>
+      <h1><a href="<?php echo site_url(); ?>">EloSpace</a></h1>
       <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
     </div>
   </header>

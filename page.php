@@ -1,12 +1,11 @@
 <?php get_header(); ?>
 
 
-<section class="top desktop" style="background-image: url(<?php the_field('banner_desktop'); ?>)">
-  <h1><?php the_title(); ?></h1>
-</section>
-<section class="top mobile" style="background-image: url(<?php the_field('banner_mobile'); ?>)">
-  <h1><?php the_title(); ?></h1>
-</section>
+<div id="masthead">
+  <div class="container">
+    <h1><?php the_title(); ?></h1>
+  </div>
+</div>
 
 
 

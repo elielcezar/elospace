@@ -10,16 +10,17 @@
     $('.carrossel').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
       dots: true,
       infinite: true,
-      arrows: true,
+      arrows: false,
       adaptiveHeight: true,
+      fade: true,
       responsive: [
         {
           breakpoint: 769,
           settings: {
-            dots: false,
+            //sdots: false,
           },
         },
       ],

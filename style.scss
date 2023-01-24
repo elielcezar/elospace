@@ -9,15 +9,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 $preto: #333;
 $cinza1: #4a4a4a;
-$laranja_claro: #ff9900;
-$laranja_escuro: #f97000;
+$laranja1: #f97000;
+$laranja2: #ff9900;
+$laranja3: #efbb30;
 
 body {
   margin: 0;
   padding: 0;
   color: $preto;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
+  font-weight: 500;
 }
 
 * {
@@ -30,10 +32,10 @@ h3,
 h4,
 h5 {
   font-weight: 800;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
 
   strong {
-    color: $laranja_claro;
+    color: $laranja2;
   }
 }
 
@@ -60,7 +62,7 @@ a:visited {
   outline: none !important;
 
   &:hover {
-    color: $laranja_claro;
+    color: $laranja2;
   }
 }
 
@@ -74,10 +76,64 @@ label {
 .form-item {
   width: 100%;
   margin: 0 0 20px 0;
+
+  p {
+    margin: 0;
+  }
 }
 
 p.form-row {
   margin: 0 0 15px 0 !important;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+
+  .form-item:nth-child(even) {
+    width: 48%;
+    margin: 0 2% 15px 0;
+  }
+
+  .form-item:nth-child(odd) {
+    width: 48%;
+    margin: 0 0 20px 2%;
+  }
+
+  .form-item.textarea {
+    width: 100%;
+    margin: 0 0 0 0;
+  }
+
+  input[type="submit"] {
+    background: $preto;
+
+    &:hover {
+      background: #000;
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    color: #fff;
+    padding: 5px 10px;
+  }
+
+  .wpcf7-response-output {
+    background: #ffb900;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+  }
+
+  form.sent.wpcf7-response-output {
+    background: #46b450;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 input[type='text'],
@@ -89,14 +145,16 @@ select {
   width: 100%;
   background: #fafafa;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
   outline: none !important;
   box-sizing: border-box;
   border: 1px solid #e0e0e0;
   border-width: 1px 1px 2px 1px;
-  padding: 20px;
+  border-radius: 5px;
+  padding: 12px 15px;
   margin: 0 5px;
   color: $preto;
+  font-family: 'Raleway', sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -111,7 +169,7 @@ select {
 button,
 input[type='submit'] {
   color: #fff;
-  background: $laranja_claro;
+  background: $laranja2;
   padding: 15px 30px;
   font-size: 15px;
   border: none;
@@ -124,9 +182,9 @@ input[type='submit'] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
-
+  border-radius: 5px;
 
   &:hover {
     background: $preto;
@@ -140,6 +198,7 @@ input[type='submit'] {
 
 img {
   max-width: 100%;
+  border-radius: 5px;
 }
 
 .container {
@@ -354,24 +413,20 @@ img {
 
 .top-message {
   width: 100%;
-  background: #000;
+  background: $laranja1;
   color: #fff;
   text-align: center;
 
-  .container {
-    max-width: 90%;
-  }
-
   p {
-    font-size: 12px;
-    margin: 5px 0;
+    font-size: 14px;
+    margin: 3px 0;
     display: inline-block;
   }
 
   a.btn {
-    background: $laranja_claro;
+    background: $preto;
     display: inline-block;
-    padding: 0 10px;
+    padding: 1px 10px;
     color: #fff;
     align-self: center;
     border-radius: 5px;
@@ -380,9 +435,11 @@ img {
     text-transform: uppercase;
     margin-left: 15px;
     transition: all .3s;
+    font-weight: 800;
 
     &:hover {
-      background: $laranja_escuro;
+      background: #fff;
+      color: $preto;
     }
   }
 }
@@ -390,7 +447,7 @@ img {
 header {
   width: 100%;
   background: #fff;
-  padding: 15px 0 10px 0;
+  padding: 20px 0 18px 0;
   position: relative;
   z-index: 5;
 
@@ -410,15 +467,23 @@ header {
 
     h1 {
       margin: 0;
-      width: 260px;
-      text-indent: -5000em;
-      background: transparent url(img/logo-topo.png) center no-repeat;
+      display: flex;
+
+      a {
+        display: inline-block;
+        margin: 0;
+        width: 220px;
+        text-indent: -5000em;
+        background: transparent url(img/logo-topo.png) center no-repeat;
+        background-size: 100%;
+      }
     }
 
     ul.menu {
       margin: 0;
       padding: 0;
       display: flex;
+      flex-wrap: wrap;
 
       @media (max-width: 980px) {
         display: none;
@@ -427,26 +492,35 @@ header {
       li {
         margin: 0;
         position: relative;
-        padding: 0 2px;
+        //padding: 0 2px;
         list-style-type: none;
-        padding-left: 14px;
-        padding-right: 14px;
+        padding-left: 20px;
+
 
         a {
           color: $cinza1;
           text-decoration: none;
-          padding: 22px 0;
+          padding: 12px 0;
           display: inline-block;
           font-size: 14px;
-          border-radius: 5px;
           margin-top: -4px;
-          font-weight: 600;
+          font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: -.001em;
+          letter-spacing: 0;
+          border-bottom: 2px solid #fff;
+          transition: all .3s;
 
           &:hover {
-            color: $laranja_claro;
+            color: $laranja1 !important;
+            border-bottom: 2px solid $laranja1;
           }
+        }
+      }
+
+      li.current-menu-item {
+        a {
+          color: $preto;
+          border-bottom: 2px solid $laranja1;
         }
       }
 
@@ -461,10 +535,18 @@ header {
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
-  text-indent: -5000em;
+  //text-indent: -5000em;
 
   &.desktop {
-    height: 26vw;
+    .item {
+      height: 39vw;
+      background-position: center;
+      background-size: cover;
+
+      @media(min-width:1600px) {
+        height: 33vw;
+      }
+    }
 
     @media(orientation:portrait) {
       display: none;
@@ -472,8 +554,12 @@ header {
   }
 
   &.mobile {
-    height: 100vw;
-    margin-bottom: 25px;
+    .item {
+      height: 100vw;
+      margin-bottom: 25px;
+      background-position: center;
+      background-size: cover;
+    }
 
     @media(orientation:landscape) {
       display: none;
@@ -482,6 +568,29 @@ header {
 
   h1 {
     display: none;
+  }
+
+  .slick-dots {
+    bottom: -30px;
+
+    li {
+      border: 2px solid #666;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      text-indent: -5000em;
+
+      button {
+        &::before {
+          display: none;
+        }
+      }
+
+      &.slick-active,
+      &:hover {
+        background: #666;
+      }
+    }
   }
 }
 
@@ -501,83 +610,18 @@ header {
 /*--- HOME ---------------------------------------------------------------------------------------------*/
 
 .page-template-front-page {
+
+
   #destaques {
-    display: flex;
-
-    @media(orientation:portrait) {
-      flex-direction: column;
-    }
-
-    .col-1 {
-      width: 45%;
-      margin-right: 5%;
-
-      @media(orientation:portrait) {
-        width: 100%;
-        margin-right: 0%;
-      }
-
-      h2 {
-        font-size: 42px;
-        font-weight: 700;
-        margin: 30px 0;
-      }
-    }
-
-    .col-2 {
-      width: 45%;
-      margin-left: 5%;
-
-      @media(orientation:portrait) {
-        width: 100%;
-        margin-left: 0%;
-      }
-    }
-  }
-
-  #diferenciais {
-    margin: 100px 0 50px 0;
-
-    ul {
+    .content {
       display: flex;
-      flex-wrap: wrap;
-
-      @media(orientation:portrait) {
-        flex-direction: column;
-      }
-
-      li {
-        width: 33%;
-        margin-bottom: 50px;
-
-        @media(orientation:portrait) {
-          width: 100%;
-        }
-
-        h4 {
-          margin: 0 0 10px 0;
-        }
-
-        p {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-
-  #produtos {
-    .produto {
-      display: flex;
-      border: 1px solid;
-      padding: 40px 50px;
-      margin-bottom: 50px;
 
       @media(orientation:portrait) {
         flex-direction: column;
       }
 
       .col-1 {
-        width: 55%;
+        width: 45%;
         margin-right: 5%;
 
         @media(orientation:portrait) {
@@ -585,26 +629,13 @@ header {
           margin-right: 0%;
         }
 
-        h3 {
-          font-size: 32px;
-          font-weight: 700;
-          margin: 0 0 20px 0;
+        h2 {
+          font-size: 42px;
+          margin: 30px 0;
         }
 
-        a.btn {
-          background: $laranja_claro;
-          display: inline-block;
-          padding: 5px 10px;
-          color: #fff;
-          align-self: center;
-          border-radius: 5px;
-          text-transform: uppercase;
-          transition: all .3s;
-          font-size: 14px;
-
-          &:hover {
-            background: $laranja_escuro;
-          }
+        p {
+          line-height: 30px;
         }
       }
 
@@ -618,80 +649,255 @@ header {
         }
       }
     }
+  }
+
+  #diferenciais {
+    margin: 100px 0 50px 0;
+    background: $laranja1;
+    padding: 50px 0;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media(orientation:portrait) {
+        flex-direction: column;
+      }
+
+      li {
+        width: 32%;
+        margin: 0 0 2% 0;
+        background-position: 20px center;
+        background-repeat: no-repeat;
+        background-size: 65px;
+        padding: 20px 20px 20px 110px;
+        //border: 1px solid $laranja1;
+        background-color: #fff;
+        border-radius: 5px;
+
+        @media(orientation:portrait) {
+          width: 100%;
+        }
+
+        h4 {
+          margin: 0 0 10px 0;
+          font-size: 19px;
+        }
+
+        p {
+          //font-size: 12px;
+        }
+
+        &.acesso24h {
+          background-image: url(img/ico-24h.png);
+        }
+
+        &.estrutura {
+          background-image: url(img/ico-estrutura.png);
+          margin: 0 2% 2% 2%;
+        }
+
+        &.beneficios {
+          background-image: url(img/ico-beneficios.png);
+          margin: 0 2% 2% 2%;
+        }
+
+        &.produtividade {
+          background-image: url(img/ico-produtividade.png);
+        }
+
+        &.networking {
+          background-image: url(img/ico-networking.png);
+        }
+
+        &.design {
+          background-image: url(img/ico-design.png);
+        }
+      }
+    }
+  }
+
+  #produtos {
+    .produto {
+      display: flex;
+      background: #f5f5f5;
+      padding: 40px 50px;
+      margin-bottom: 50px;
+      border-bottom: 5px solid $laranja1;
+
+      @media(orientation:portrait) {
+        flex-direction: column;
+      }
+
+      .col-1 {
+        width: 60%;
+        margin-right: 5%;
+
+        @media(orientation:portrait) {
+          width: 100%;
+          margin-right: 0%;
+        }
+
+        h3 {
+          font-size: 32px;
+          margin: 0 0 20px 0;
+        }
+
+        ul {
+          margin: 0 0 10px 0;
+
+          li {
+            margin: 0 0 10px 0;
+          }
+        }
+
+        a.btn {
+          background: $laranja2;
+          display: inline-block;
+          padding: 5px 25px;
+          color: #fff;
+          align-self: center;
+          border-radius: 5px;
+          text-transform: uppercase;
+          transition: all .3s;
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 1px;
+
+          &:hover {
+            background: $laranja1;
+          }
+        }
+      }
+
+      .col-2 {
+        width: 40%;
+        margin-left: 5%;
+
+        @media(orientation:portrait) {
+          width: 100%;
+          margin-left: 0%;
+        }
+
+        .item {
+          text-align: center;
+
+          img {
+            display: inline-block;
+          }
+        }
+      }
+    }
 
     .produto-2 {
       flex-direction: row-reverse;
+
+      .col-1 {
+        margin-left: 5%;
+        margin-right: 0%;
+      }
+
+      .col-2 {
+        margin-right: 0%;
+        margin-left: 0%;
+      }
     }
   }
 
   #eventos {
-    background: #f5f5f5;
-    padding: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-
-    h3 {
-      font-size: 26px;
-      font-weight: 500;
-      width: 50%;
-    }
-
-    a.btn {
-      background: $laranja_claro;
-      display: inline-block;
-      padding: 10px 30px;
-      color: #fff;
-      align-self: center;
+    .content {
+      background: $preto url(img/bg-eventos.jpg) center -172px no-repeat;
+      padding: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
       border-radius: 5px;
-      text-transform: uppercase;
-      transition: all .3s;
-      font-size: 18px;
 
-      &:hover {
-        background: $laranja_escuro;
+      h3 {
+        font-size: 30px;
+        font-weight: 500;
+        width: 50%;
+        color: #fff;
+        font-weight: 700;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+      }
+
+      a.btn {
+        background: $laranja2;
+        display: inline-block;
+        padding: 10px 30px;
+        color: #fff;
+        align-self: center;
+        border-radius: 5px;
+        text-transform: uppercase;
+        transition: all .3s;
+        font-size: 18px;
+
+        &:hover {
+          background: $laranja1;
+        }
       }
     }
   }
 }
 
 #depoimentos {
-  background: #f5f5f5;
-  padding: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .content {
+    background: #ff9900;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
 
-  h3 {
-    font-size: 26px;
-    font-weight: 500;
-    width: 30%;
-    margin: 0 10% 0 0;
-  }
-
-  .depoimentos {
-    width: 60%;
-
-    .item {
-      margin: 0 10px;
+    h3 {
+      font-size: 26px;
+      width: 30%;
+      margin: 0 10% 0 0;
+      color: #fff;
     }
 
-    .slick-prev:before,
-    .slick-next:before {
-      color: #000;
+    .depoimentos {
+      width: 60%;
+
+      .item {
+        margin: 0 10px;
+
+        p {
+          margin-bottom: 0;
+          color: #fff;
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+        color: #fff;
+      }
     }
   }
-
 }
 
 
 /*--- PAGINA INTERNA -------------------------------------------------------------------*/
-.page-template-default {
+.page-template-default,
+.produto-template-default,
+.page-template-page-cursos {
 
   #masthead {
+    padding: 120px 0;
+    background: $preto url(img/bg-masthead.jpg) top center no-repeat;
+    text-align: center;
+
     @media(orientation:landscape) {
       margin-bottom: 0;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 46px;
     }
   }
 
@@ -827,87 +1033,54 @@ header {
   }
 }
 
-/*--- AUTORES ------------------------------------------------------------------------------------------*/
-.page-id-24 {
-  #autores {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
-    .autor {
-      width: 20%;
-      padding: 0 1.5% 40px 1.5%;
-
-      @media(orientation:portrait) {
-        width: 50%;
-      }
-
-      p {
-        font-weight: bold;
-        margin: 0;
-      }
-    }
+/*--- PRODUTO INDIVIDUAL ------------------------------------------------------------------------------------------*/
+.single-produto {
+  #masthead {
+    background: $preto url(img/bg-masthead.jpg) top center no-repeat;
+    background-size: cover;
   }
-}
 
-/*--- MIDIA ------------------------------------------------------------------------------------------*/
-.page-template-page-midia {
   #principal {
-    padding: 0;
+    padding-bottom: 0;
 
-    h2 {
-      width: 100%;
-      font-size: 38px;
-      margin: 80px 0 40px 0;
-
-      @media(orientation:portrait) {
-        line-height: 42px;
-      }
-    }
-
-    .itens {
+    .conteudo {
       display: flex;
-      flex-wrap: wrap;
 
-      .item {
-        width: 33.33%;
-        padding: 20px;
-        margin-bottom: 20px;
+      .col-1 {
+        width: 45%;
+        margin-right: 5%;
 
-        @media(orientation:portrait) {
-          width: 100%;
-          padding: 20px 0;
+        h2 {
+          margin-top: 0;
         }
 
-        .post-thumbnail {
-          text-align: center;
+        p {
+          line-height: 20px;
+        }
+      }
 
-          img {
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-            height: auto;
-            transition: all .3s;
+      .col-2 {
+        width: 50%;
 
-            &:hover {
-              box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+        .carrossel {
+          background: #f5f5f5;
+          border: none;
+          border-radius: 5px;
+
+          .item {
+            img {
+              width: 90%;
             }
           }
-        }
 
-        .content {
-          h4 {
-            line-height: 21px;
-          }
+          .slick-dots {
+            li {
+              width: 13px;
+              height: 13px;
 
-          p {
-            a {
-              display: inline-block;
-              padding: 5px 15px;
-              border: 2px solid #000;
-              transition: all .3s;
-
-              &:hover {
-                color: #fff;
-                background: #000;
+              button {
+                width: 10px;
+                height: 10px;
               }
             }
           }
@@ -915,119 +1088,54 @@ header {
       }
     }
   }
-}
 
+  #contato {
+    background: $laranja1;
+    padding: 50px 0;
 
-/*--- CONTEUDOS ------------------------------------------------------------------------------------------*/
-.page-template-page-conteudos {
-  #principal {
     .container {
-      max-width: 960px;
-    }
-
-    .item {
       display: flex;
-      margin-bottom: 40px;
+      //max-width: 1200px;
 
-      @media(orientation:portrait) {
-        flex-direction: column;
-      }
+      .col-1 {
+        width: 40%;
+        margin-right: 5%;
 
-      .post-thumbnail {
-        @media(orientation:landscape) {
-          max-width: 30%;
-          margin-right: 40px;
-        }
-
-        img {
-          height: auto;
-        }
-      }
-
-      .content {
-        h3 {
+        h2 {
+          font-size: 36px;
+          color: #fff;
           margin-top: 0;
-
-          @media(orientation:portrait) {
-            margin: 20px 0 0 0;
-          }
         }
+      }
 
-        p {
-          a {
-            display: inline-block;
-            padding: 5px 15px;
-            border: 2px solid #000;
-            transition: all .3s;
-
-            &:hover {
-              color: #fff;
-              background: #000;
-            }
-          }
-        }
+      .col-2 {
+        width: 55%;
       }
     }
   }
 }
 
-/*--- CONTEUDO INDIVIDUAL ------------------------------------------------------------------------------------------*/
-.single-conteudo {
-  #masthead {
-    text-align: center;
-    padding: 50px 0;
-    background: #f5f5f5;
 
-    @media(orientation:portrait) {
-      padding: 25px 0;
-      margin-bottom: 40px;
+/*--- CONTATO ------------------------------------------------------------------------------------------*/
+.page-id-12 {
+  #masthead {
+    padding: 120px 0;
+    background: $preto url(img/bg-masthead.jpg) top center no-repeat;
+    text-align: center;
+
+    @media(orientation:landscape) {
+      margin-bottom: 0;
     }
 
     h1 {
-      margin: 0;
-
-      @media(orientation:portrait) {
-        line-height: 34px;
-      }
+      color: #fff;
+      font-size: 46px;
     }
   }
 
-  #principal {
-    margin-bottom: 40px;
-
-    .container {
-      max-width: 960px;
-    }
-
-    .video {
-      text-align: center;
-      margin-bottom: 40px;
-
-      iframe {
-        margin: auto;
-        width: 100%;
-        max-width: 900px;
-
-        @media(orientation:portrait) {
-          height: 50vw;
-        }
-
-        @media(orientation:landscape) and (max-width:1399px) {
-          height: 510px;
-        }
-
-        @media(min-width:1400px) {
-          height: 560px;
-        }
-      }
-    }
-  }
-}
-
-/*--- CONTATO ------------------------------------------------------------------------------------------*/
-.page-id-55 {
   #principal {
     background: #f5f5f5;
+    padding-bottom: 100px;
 
     h3 {
       font-size: 32px;
@@ -1075,11 +1183,15 @@ header {
 
 /*--- FOOTER ------------------------------------------------------------------------------------------*/
 
+.mapa {
+  //margin-top: 50px;
+}
+
 footer {
   background: #222;
   color: #fff;
   padding: 50px 0;
-
+  border-top: 5px solid $laranja1;
 
   @media (max-width: 767px) {
     padding: 10%;
@@ -1113,13 +1225,13 @@ footer {
 
     ul {
       li {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
     }
 
     p {
       font-size: 15px;
-      color: #ababab;
+      color: #fff;
 
       strong {
         color: #fff;
@@ -1132,11 +1244,14 @@ footer {
       display: inline-block;
       transition: all 0.3s;
       font-weight: normal;
-      font-size: 14px;
 
       &:hover {
-        color: #fff;
+        color: $laranja2;
       }
+    }
+
+    .social {
+      font-size: 36px;
     }
 
   }
@@ -1175,6 +1290,7 @@ footer {
 
 .page-template-page-contato {
   #principal {
+
     .container {
       display: flex;
 
