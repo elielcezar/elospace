@@ -24,12 +24,16 @@ Template Name: Cursos
       while ($loop->have_posts()) : $loop->the_post(); ?>
     <div class="curso">
       <div class="col-1">
-        <h2><?php the_title(); ?></h2>
-        <p><strong>Quando:</strong> <?php the_field('quando'); ?></p>
-        <p><strong>Local:</strong> <?php the_field('local'); ?></p>
+        <a href="<?php the_permalink(); ?>">
+          <?php the_post_thumbnail(); ?>
+        </a>
       </div>
       <div class="col-2">
-        <p><strong>Instrutor:</strong> <?php the_field('instrutor'); ?></p>
+        <h2><?php the_title(); ?></h2>
+        <p><?php the_field('informacoes_principais'); ?></p>
+        <p><a href="<?php the_permalink(); ?>" class="btn">
+            Saiba mais <i class="fa-solid fa-right-long"></i>
+          </a></p>
       </div>
     </div>
     <?php endwhile;

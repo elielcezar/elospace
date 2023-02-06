@@ -8,6 +8,24 @@
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+      'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-THQSFGG');
+  </script>
+  <!-- End Google Tag Manager -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +49,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQSFGG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <div class="top-message">
     <div class="container">
@@ -38,20 +59,20 @@
     </div>
   </div>
 
-  <a class="menuBtn">
-    <span class="lines"></span>
-  </a>
-  <div class="menu-mobile">
-    <div class="mainContainer">
-      <nav class="mainMenu">
-        <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
-      </nav>
-    </div>
-  </div>
-
   <header>
     <div class="container">
       <h1><a href="<?php echo site_url(); ?>">EloSpace</a></h1>
       <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
+
+      <a class="menuBtn">
+        <span class="lines"></span>
+      </a>
+      <div class="menu-mobile">
+        <div class="mainContainer">
+          <nav class="mainMenu">
+            <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
+          </nav>
+        </div>
+      </div>
     </div>
   </header>

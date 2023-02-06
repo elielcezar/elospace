@@ -52,12 +52,16 @@
       }
     });
 
-    if (mobile) {
+    document.addEventListener( 'wpcf7submit', function( event ) {
+      console.log('teste');
+      location = 'https://www.elospace.com.br/contato-enviado-com-sucesso/';
+    }, false );
+
+    /*if (mobile) {
       $('<a/>', {
         class: 'voltar',
         text: 'Voltar',
-      }).prependTo('.menu-item-has-children .sub-menu');
-      /* menu */
+      }).prependTo('.menu-item-has-children .sub-menu');      
       $('li.menu-item-has-children > a').click(function (e) {
         e.preventDefault();
         $('ul#menu-menu-1').addClass('slide on');
@@ -65,6 +69,6 @@
       $('.sub-menu .voltar').click(function () {
         $('ul#menu-menu-1').removeClass('slide on');
       });
-    }
+    }*/
   });
 })(jQuery);

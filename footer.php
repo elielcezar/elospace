@@ -1,8 +1,5 @@
 <footer>
   <div class="container">
-
-  </div>
-  <div class="container">
     <div class="col-1">
       <a href="<?php echo site_url(); ?>">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-rodape.png" alt="">
@@ -11,6 +8,7 @@
         Torre Sucesso, Sala 103,
         Curitiba -PR</p>
       <p>comercial@elospace.com.br</p>
+      <p>41 3209 4009</p>
       <p>41 98785-1957</p>
     </div>
     <div class="col-2">
@@ -19,10 +17,12 @@
         <li><a href="<?php echo site_url(); ?>" aria-current="page">Home</a></li>
         <li><a href="<?php echo site_url(); ?>/produto/espaco-compartilhado/">Espaço Compartilhado</a></li>
         <li><a href="<?php echo site_url(); ?>/produto/salas-privativas/">Salas Privativas</a></li>
-        <li><a href="<?php echo site_url(); ?>/cursos/">Cursos</a></li>
-        <li><a href="<?php echo site_url(); ?>/eventos/">Eventos</a></li>
+        <!--li><a href="<?php echo site_url(); ?>/cursos/">Cursos</a></li>
+        <li><a href="<?php echo site_url(); ?>/eventos/">Eventos</a></li-->
         <li><a href="<?php echo site_url(); ?>/produto/endereco-comercial-fiscal/">Endereço Comercial/Fiscal</a></li>
         <li><a href="<?php echo site_url(); ?>/produto/produto/sala-de-reunioes/">Sala de Reuniões</a></li>
+        <li><a href="<?php echo site_url(); ?>/produto/podcasts/">Podcasts</a></li>
+
       </ul>
     </div>
     <div class="col-3">

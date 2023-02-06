@@ -28,7 +28,7 @@ Template Name: Homepage Custom
   endif; ?>
 </section>
 
-<section class="banners top mobile carrossel">
+<!--section class="banners top mobile carrossel">
   <?php
   $images = acf_photo_gallery('banner-mobile', $post->ID);
   if (count($images)) :
@@ -46,7 +46,7 @@ Template Name: Homepage Custom
   </div>
   <?php endforeach;
   endif; ?>
-</section>
+</section-->
 
 <section id="principal">
 
@@ -55,9 +55,8 @@ Template Name: Homepage Custom
       <div class="content">
         <div class="col-1">
           <h2>Nossa estrutura e localização<br />vão surpreender você</h2>
-          <p>Nosso espaço é disruptivo e moderno, com escritórios premiuns, espaços compartilhados, salas de reuniões, sala para audiência, recepção, copa, espaço zen, além de contar com auditório, restaurantes e academia no local, a fim de dar conforto e segurança para nossos clientes.</p>
-
-          <p>Estamos localizados no condomínio Infinity Prime Offices - Torre C - Sucess, no coração do bairro Cabral, ao lado da Justiça Federal e há apenas 02 quarteirões do Terminal de Ônibus do Cabral. </p>
+          <p>Nosso espaço é disruptivo e moderno, com escritórios premiuns, espaços compartilhados, salas de reuniões, gravação de podcast, recepção, copa, espaço zen, além de contar no condomínio com; auditório, cafés, salões de beleza, restaurante e academia no local, a fim de dar conforto e segurança para nossos clientes.</p>
+          <p>Estamos localizados no condomínio Infinity Prime Offices - Torre C - Sucess, no coração do bairro Cabral, ao lado da Justiça Federal e há apenas 02 quarteirões do Terminal de Ônibus do Cabral.</p>
         </div>
         <div class="col-2">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/infinity.jpg" alt="">
@@ -117,13 +116,13 @@ Template Name: Homepage Custom
         <div class="col-2">
           <div class="carrossel">
             <div class="item">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ambiente1.jpg" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/espaco-1.jpg" alt="">
             </div>
             <div class="item">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ambiente2.jpg" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/espaco-2.jpg" alt="">
             </div>
             <div class="item">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ambiente3.jpg" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/espaco-3.jpg" alt="">
             </div>
           </div>
         </div>
@@ -147,13 +146,13 @@ Template Name: Homepage Custom
         <div class="col-2">
           <div class="carrossel">
             <div class="item">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ambiente3.jpg" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sala-1.jpg" alt="">
             </div>
             <div class="item">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ambiente2.jpg" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sala-2.jpg" alt="">
             </div>
             <div class="item">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ambiente1.jpg" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sala-3.jpg" alt="">
             </div>
           </div>
         </div>
@@ -175,13 +174,13 @@ Template Name: Homepage Custom
         <div class="col-2">
           <div class="carrossel">
             <div class="item">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ambiente2.jpg" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/comercial-1.jpg" alt="">
             </div>
             <div class="item">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ambiente1.jpg" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/comercial-2.jpg" alt="">
             </div>
             <div class="item">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ambiente3.jpg" alt="">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/comercial-3.jpg" alt="">
             </div>
           </div>
         </div>
