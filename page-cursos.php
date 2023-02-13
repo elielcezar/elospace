@@ -22,20 +22,23 @@ Template Name: Cursos
     ));
     if ($loop->have_posts()) :
       while ($loop->have_posts()) : $loop->the_post(); ?>
-    <div class="curso">
-      <div class="col-1">
-        <a href="<?php the_permalink(); ?>">
-          <?php the_post_thumbnail(); ?>
-        </a>
-      </div>
-      <div class="col-2">
-        <h2><?php the_title(); ?></h2>
-        <p><?php the_field('informacoes_principais'); ?></p>
-        <p><a href="<?php the_permalink(); ?>" class="btn">
-            Saiba mais <i class="fa-solid fa-right-long"></i>
-          </a></p>
-      </div>
-    </div>
+        <div class="curso">
+          <div class="col-1">
+            <a href="<?php the_permalink(); ?>">
+              <?php the_post_thumbnail(); ?>
+            </a>
+          </div>
+          <div class="col-2">
+            <h2><?php the_title(); ?></h2>
+            <p><strong>Data:</strong> <?php the_field('data'); ?></p>
+            <p><strong>Local:</strong> <?php the_field('local'); ?></p>
+            <p><strong>Duração:</strong> <?php the_field('duracao'); ?></p>
+            <p><?php the_field('infos_adicionais'); ?></p>
+            <p><a href="<?php the_permalink(); ?>" class="btn">
+                Saiba mais <i class="fa-solid fa-right-long"></i>
+              </a></p>
+          </div>
+        </div>
     <?php endwhile;
     endif;
     wp_reset_postdata();

@@ -10,10 +10,9 @@
 
       <div class="informacoes top">
         <div class="col-1">
-          <h2>Sobre o Curso</h2>
+          <h2>Sobre o Evento</h2>
           <p><strong>Data:</strong> <?php the_field('data'); ?></p>
           <p><strong>Local:</strong> <?php the_field('local'); ?></p>
-          <p><strong>Duração:</strong> <?php the_field('duracao'); ?></p>
           <p><strong>Valor:</strong> <?php the_field('valor'); ?></p>
           <p><?php the_field('infos_adicionais'); ?></p>
         </div>
@@ -27,7 +26,7 @@
 
       <div class="informacoes">
         <div class="col-1">
-          <h3>Diferenciais</h3>
+          <h3>O que é?</h3>
         </div>
         <div class="col-2">
           <?php the_field('diferenciais'); ?>
@@ -36,7 +35,7 @@
 
       <div class="informacoes professor">
         <div class="col-1">
-          <h3>Quem é o Professor?</h3>
+          <h3>Como Funciona?</h3>
         </div>
         <div class="col-2">
           <div class="img">
@@ -50,7 +49,7 @@
 
       <div class="informacoes empresa">
         <div class="col-1">
-          <h3>Qual é a empresa?</h3>
+          <h3>Benefícios para as empresas participantes:</h3>
         </div>
         <div class="col-2">
           <div class="img">
@@ -64,7 +63,7 @@
 
       <div class="informacoes clientes">
         <div class="col-1">
-          <h3>Onde já atuou?</h3>
+          <h3>Fornecedores:</h3>
         </div>
         <div class="col-2">
           <?php
@@ -74,9 +73,9 @@
             foreach ($images as $image) :
               $full_image_url = $image['full_image_url'];
           ?>
-              <div class="item">
-                <img src="<?php echo $full_image_url; ?>" alt="">
-              </div>
+          <div class="item">
+            <img src="<?php echo $full_image_url; ?>" alt="">
+          </div>
           <?php endforeach;
           endif; ?>
         </div>

@@ -28,16 +28,16 @@
     <div class="col-3">
       <h5>Institucional</h5>
       <ul>
-        <li><a href="#">Sobre a Elospace</a></li>
+        <li><a href="<?php echo site_url(); ?>/sobre/">Sobre a Elospace</a></li>
         <li><a href="<?php echo site_url(); ?>/contato/">Contato</a></li>
       </ul>
     </div>
     <div class="col-4">
       <h5>Acompanhe</h5>
       <ul class="social">
-        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/elospace/?originalSubdomain=br"><i class="fa-brands fa-linkedin-in" target="_blank"></i></a></li>
+        <li><a href="https://www.instagram.com/elospace_/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/elospacecuritiba/"><i class="fa-brands fa-facebook" target="_blank"></i></a></li>
       </ul>
     </div>
   </div>
