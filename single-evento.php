@@ -24,71 +24,56 @@
         </div>
       </div>
 
-      <div class="informacoes">
-        <div class="col-1">
-          <h3>O que é?</h3>
-        </div>
-        <div class="col-2">
-          <?php the_field('diferenciais'); ?>
-        </div>
-      </div>
-
-      <div class="informacoes professor">
-        <div class="col-1">
-          <h3>Como Funciona?</h3>
-        </div>
-        <div class="col-2">
-          <div class="img">
-            <img src="<?php the_field('foto_professor'); ?>" alt="">
+      <?php        
+        if( have_rows('informacoes_evento') ):
+            
+            while( have_rows('informacoes_evento') ) : the_row();                
+                $titulo = get_sub_field('titulo');
+                $descricao = get_sub_field('descricao');                
+      ?>
+         <div class="informacoes">
+            <div class="col-1">
+              <h3><?php echo $titulo; ?></h3>
+            </div>
+            <div class="col-2">
+              <?php echo $descricao; ?>
+            </div>
           </div>
-          <div class="info">
-            <?php the_field('professor'); ?>
-          </div>
-        </div>
-      </div>
 
-      <div class="informacoes empresa">
-        <div class="col-1">
-          <h3>Benefícios para as empresas participantes:</h3>
-        </div>
-        <div class="col-2">
-          <div class="img">
-            <img src="<?php the_field('logo_empresa'); ?>" alt="">
-          </div>
-          <div class="info">
-            <?php the_field('empresa'); ?>
-          </div>
-        </div>
-      </div>
+      <?php endwhile;
+        else :            
+        endif;
+      ?>
 
-      <div class="informacoes clientes">
-        <div class="col-1">
-          <h3>Fornecedores:</h3>
-        </div>
-        <div class="col-2">
-          <?php
-          $images = acf_photo_gallery('clientes', $post->ID);
+      <?php        
+        if( have_rows('logos') ):
+            
+            while( have_rows('logos') ) : the_row();                
+                $titulo = get_sub_field('titulo');
+                $lista_logos = get_sub_field('lista_logos');                
+                $size = 'full';
+      ?>
+         <div class="informacoes logos">
+            <div class="col-1">
+              <h3><?php echo $titulo; ?></h3>
+            </div>
+            <div class="col-2">
 
-          if (count($images)) :
-            foreach ($images as $image) :
-              $full_image_url = $image['full_image_url'];
-          ?>
-          <div class="item">
-            <img src="<?php echo $full_image_url; ?>" alt="">
+              <?php foreach( $lista_logos as $logo ): ?>                  
+                <img src="<?php echo $logo; ?>" alt="">
+              <?php endforeach; ?>
+
+            </div>
           </div>
-          <?php endforeach;
-          endif; ?>
-        </div>
-      </div>
 
-      <div class="informacoes">
-        <div class="col-1">
-          <h3>Qual é o conteúdo programático do Workshop? </h3>
-        </div>
-        <div class="col-2">
-          <?php the_field('conteudo_programatico'); ?>
-        </div>
-      </div>
+      <?php endwhile;
+        else :            
+        endif;
+      ?>
+
+      
+
+     
 
 
     </div>

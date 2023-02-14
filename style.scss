@@ -1542,16 +1542,20 @@ header {
   }
 
   .informacoes.professor,
-  .informacoes.empresa {
+  .informacoes.empresa,
+  .informacoes.logos,
+   {
     .col-2 {
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
 
       @media(orientation:portrait) {
         flex-direction: column;
       }
 
-      .img {
+      .img {        
+        
         @media(orientation:landscape) {
           width: 25%;
           margin-right: 25px;
@@ -1563,10 +1567,14 @@ header {
           width: 75%;
         }
       }
+      img{
+        align-self: center;
+      }
     }
   }
 
 }
+
 
 /*--- CONTATO ------------------------------------------------------------------------------------------*/
 .page-id-12 {
