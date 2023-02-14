@@ -1174,9 +1174,20 @@ header .container ul.menu li.current-menu-item a {
 .page-template-page-cursos .curso {
   display: flex;
 }
+@media (orientation: portrait) {
+  .page-template-page-cursos .curso {
+    flex-direction: column;
+  }
+}
 .page-template-page-cursos .curso .col-1 {
   width: 25%;
   margin-right: 5%;
+}
+@media (orientation: portrait) {
+  .page-template-page-cursos .curso .col-1 {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 .page-template-page-cursos .curso .col-1 img {
   align-self: center;
@@ -1185,6 +1196,11 @@ header .container ul.menu li.current-menu-item a {
 }
 .page-template-page-cursos .curso .col-2 {
   width: 70%;
+}
+@media (orientation: portrait) {
+  .page-template-page-cursos .curso .col-2 {
+    width: 100%;
+  }
 }
 .page-template-page-cursos .curso .col-2 ul li {
   margin-bottom: 10px;
@@ -1329,6 +1345,18 @@ header .container ul.menu li.current-menu-item a {
 .single-evento #masthead {
   height: auto;
 }
+@media (orientation: portrait) {
+  .single-curso #masthead img.desktop,
+  .single-evento #masthead img.desktop {
+    display: none;
+  }
+}
+@media (orientation: landscape) {
+  .single-curso #masthead img.mobile,
+  .single-evento #masthead img.mobile {
+    display: none;
+  }
+}
 .single-curso #principal .container,
 .single-evento #principal .container {
   max-width: 1100px;
@@ -1336,7 +1364,7 @@ header .container ul.menu li.current-menu-item a {
 .single-curso .informacoes,
 .single-evento .informacoes {
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 @media (orientation: portrait) {
   .single-curso .informacoes,
@@ -1352,7 +1380,7 @@ header .container ul.menu li.current-menu-item a {
 .single-curso .informacoes p,
 .single-evento .informacoes p {
   font-size: 18px;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
 }
 .single-curso .informacoes .capa,
 .single-evento .informacoes .capa {
@@ -1453,31 +1481,23 @@ header .container ul.menu li.current-menu-item a {
 }
 .single-curso .informacoes.professor .col-2,
 .single-curso .informacoes.empresa .col-2,
-.single-curso .informacoes.logos .col-2,
 .single-evento .informacoes.professor .col-2,
-.single-evento .informacoes.empresa .col-2,
-.single-evento .informacoes.logos .col-2 {
+.single-evento .informacoes.empresa .col-2 {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 @media (orientation: portrait) {
   .single-curso .informacoes.professor .col-2,
   .single-curso .informacoes.empresa .col-2,
-  .single-curso .informacoes.logos .col-2,
   .single-evento .informacoes.professor .col-2,
-  .single-evento .informacoes.empresa .col-2,
-  .single-evento .informacoes.logos .col-2 {
+  .single-evento .informacoes.empresa .col-2 {
     flex-direction: column;
   }
 }
 @media (orientation: landscape) {
   .single-curso .informacoes.professor .col-2 .img,
   .single-curso .informacoes.empresa .col-2 .img,
-  .single-curso .informacoes.logos .col-2 .img,
   .single-evento .informacoes.professor .col-2 .img,
-  .single-evento .informacoes.empresa .col-2 .img,
-  .single-evento .informacoes.logos .col-2 .img {
+  .single-evento .informacoes.empresa .col-2 .img {
     width: 25%;
     margin-right: 25px;
   }
@@ -1485,20 +1505,21 @@ header .container ul.menu li.current-menu-item a {
 @media (orientation: landscape) {
   .single-curso .informacoes.professor .col-2 .info,
   .single-curso .informacoes.empresa .col-2 .info,
-  .single-curso .informacoes.logos .col-2 .info,
   .single-evento .informacoes.professor .col-2 .info,
-  .single-evento .informacoes.empresa .col-2 .info,
-  .single-evento .informacoes.logos .col-2 .info {
+  .single-evento .informacoes.empresa .col-2 .info {
     width: 75%;
   }
 }
 .single-curso .informacoes.professor .col-2 img,
 .single-curso .informacoes.empresa .col-2 img,
-.single-curso .informacoes.logos .col-2 img,
 .single-evento .informacoes.professor .col-2 img,
-.single-evento .informacoes.empresa .col-2 img,
-.single-evento .informacoes.logos .col-2 img {
+.single-evento .informacoes.empresa .col-2 img {
   align-self: center;
+}
+.single-curso .informacoes.logos,
+.single-evento .informacoes.logos {
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /*--- CONTATO ------------------------------------------------------------------------------------------*/

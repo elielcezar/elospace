@@ -1253,9 +1253,18 @@ header {
   .curso {
     display: flex;
 
+    @media(orientation:portrait){
+      flex-direction: column;
+    }
+
     .col-1 {
       width: 25%;
       margin-right: 5%;
+
+      @media(orientation:portrait){
+        width: 100%;
+        margin-right: 0;
+      }
 
       img {
         align-self: center;
@@ -1266,6 +1275,10 @@ header {
 
     .col-2 {
       width: 70%;
+
+      @media(orientation:portrait){
+        width: 100%;
+      }
 
       ul {
         li {
@@ -1419,6 +1432,17 @@ header {
 .single-evento {
   #masthead {
     height: auto;
+
+    img.desktop{
+      @media(orientation:portrait){
+        display: none;
+      }
+    }
+    img.mobile{
+      @media(orientation:landscape){
+        display: none;
+      }
+    }
   }
 
   #principal {
@@ -1429,7 +1453,7 @@ header {
 
   .informacoes {
     display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
     @media(orientation:portrait) {
       flex-direction: column;
@@ -1444,7 +1468,7 @@ header {
 
     p {
       font-size: 18px;
-      margin: 0 0 20px 0;
+      margin: 0 0 10px 0;
     }
 
     .capa {
@@ -1542,14 +1566,10 @@ header {
   }
 
   .informacoes.professor,
-  .informacoes.empresa,
-  .informacoes.logos,
-   {
+  .informacoes.empresa {
     .col-2 {
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-
+     
       @media(orientation:portrait) {
         flex-direction: column;
       }
@@ -1571,6 +1591,12 @@ header {
         align-self: center;
       }
     }
+  }
+
+  .informacoes.logos{
+    justify-content: space-around;
+    flex-wrap: wrap;
+
   }
 
 }

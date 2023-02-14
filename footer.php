@@ -14,7 +14,7 @@
     <div class="col-2">
       <h5>Serviços</h5>
       <ul class="menu">
-        <li><a href="<?php echo site_url(); ?>" aria-current="page">Home</a></li>
+        <li><a href="<?php echo site_url(); ?>">Home</a></li>
         <li><a href="<?php echo site_url(); ?>/produto/espaco-compartilhado/">Espaço Compartilhado</a></li>
         <li><a href="<?php echo site_url(); ?>/produto/salas-privativas/">Salas Privativas</a></li>
         <!--li><a href="<?php echo site_url(); ?>/cursos/">Cursos</a></li>
@@ -35,9 +35,9 @@
     <div class="col-4">
       <h5>Acompanhe</h5>
       <ul class="social">
-        <li><a href="https://www.linkedin.com/company/elospace/?originalSubdomain=br"><i class="fa-brands fa-linkedin-in" target="_blank"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/elospace/?originalSubdomain=br" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
         <li><a href="https://www.instagram.com/elospace_/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-        <li><a href="https://www.facebook.com/elospacecuritiba/"><i class="fa-brands fa-facebook" target="_blank"></i></a></li>
+        <li><a href="https://www.facebook.com/elospacecuritiba/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
       </ul>
     </div>
   </div>

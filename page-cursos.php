@@ -31,6 +31,7 @@ Template Name: Cursos
           <div class="col-2">
             <h2><?php the_title(); ?></h2>
             <p><strong>Data:</strong> <?php the_field('data'); ?></p>
+            <p><strong>Horário:</strong> <?php the_field('horario'); ?></p>
             <p><strong>Local:</strong> <?php the_field('local'); ?></p>
             <p><strong>Duração:</strong> <?php the_field('duracao'); ?></p>
             <p><?php the_field('infos_adicionais'); ?></p>
