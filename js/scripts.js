@@ -6,6 +6,16 @@
     const desktop = h < w;
     const menuMobile = document.querySelector('.menu-mobile .mainMenu');
 
+    $('p.accordion').click(function () {
+      $p = $(this).parent();
+      if ($p.hasClass('active')) {
+        $p.removeClass('active');
+      } else {
+        $p.addClass('active');
+      }
+      $('.item.active').not($p).removeClass('active');
+    });
+
     /* CARROSSEL */
     $('.carrossel').slick({
       slidesToShow: 1,

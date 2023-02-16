@@ -1341,6 +1341,10 @@ header .container ul.menu li.current-menu-item a {
 }
 */
 /*--- CURSO INDIVIDUAL ----------------------------------------------------------------------------------*/
+.single-curso,
+.single-evento {
+  /*------*/
+}
 .single-curso #masthead,
 .single-evento #masthead {
   height: auto;
@@ -1520,6 +1524,115 @@ header .container ul.menu li.current-menu-item a {
 .single-evento .informacoes.logos {
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.single-curso #fornecedores,
+.single-evento #fornecedores {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 0 0 50px 0;
+  border-top: 3px solid #f97000;
+  text-align: center;
+}
+.single-curso #fornecedores h2,
+.single-evento #fornecedores h2 {
+  font-size: 32px;
+  margin: -36px auto 60px auto;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 15px 0;
+  display: block;
+  border: 3px solid #f97000;
+  background: #fff;
+  letter-spacing: 1px;
+  max-width: 400px;
+  font-weight: 800;
+  text-align: center;
+}
+.single-curso #fornecedores .fornecedor,
+.single-evento #fornecedores .fornecedor {
+  display: flex;
+  margin-bottom: 50px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: left;
+}
+@media (orientation: portrait) {
+  .single-curso #fornecedores .fornecedor,
+  .single-evento #fornecedores .fornecedor {
+    flex-direction: column;
+  }
+}
+.single-curso #fornecedores .fornecedor .col-1,
+.single-evento #fornecedores .fornecedor .col-1 {
+  margin-right: 5%;
+}
+.single-curso #fornecedores .fornecedor .col-1 img,
+.single-evento #fornecedores .fornecedor .col-1 img {
+  max-width: 250px;
+}
+.single-curso #fornecedores .fornecedor .col-2,
+.single-evento #fornecedores .fornecedor .col-2 {
+  flex: 30%;
+}
+.single-curso #fornecedores .fornecedor .col-2 .itens-accordion h3,
+.single-evento #fornecedores .fornecedor .col-2 .itens-accordion h3 {
+  font-size: 22px;
+  cursor: pointer;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  text-align: left;
+  padding: 2% 0;
+  border-bottom: 1px solid #f97000;
+}
+@media (max-width: 767px) {
+  .single-curso #fornecedores .fornecedor .col-2 .itens-accordion h3,
+  .single-evento #fornecedores .fornecedor .col-2 .itens-accordion h3 {
+    font-size: 16px;
+  }
+}
+.single-curso #fornecedores .fornecedor .col-2 .itens-accordion p.accordion,
+.single-evento #fornecedores .fornecedor .col-2 .itens-accordion p.accordion {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  background: #f97000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.single-curso #fornecedores .fornecedor .col-2 .itens-accordion div.accordion,
+.single-evento #fornecedores .fornecedor .col-2 .itens-accordion div.accordion {
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  transition: all 0.2s;
+}
+@media (max-width: 767px) {
+  .single-curso #fornecedores .fornecedor .col-2 .itens-accordion div.accordion,
+  .single-evento #fornecedores .fornecedor .col-2 .itens-accordion div.accordion {
+    padding: 0 25px;
+  }
+}
+.single-curso #fornecedores .fornecedor .col-2 .itens-accordion .active h3.accordion,
+.single-evento #fornecedores .fornecedor .col-2 .itens-accordion .active h3.accordion {
+  border-bottom: 1px solid #4a4a4a;
+}
+.single-curso #fornecedores .fornecedor .col-2 .itens-accordion .active div.accordion,
+.single-evento #fornecedores .fornecedor .col-2 .itens-accordion .active div.accordion {
+  height: auto;
+  opacity: 1;
+  padding: 0 0 2.5% 0;
+}
+.single-curso #fornecedores .fornecedor .col-2 .itens-accordion li,
+.single-evento #fornecedores .fornecedor .col-2 .itens-accordion li {
+  font-size: 16px;
+  line-height: 26px;
 }
 
 /*--- CONTATO ------------------------------------------------------------------------------------------*/
