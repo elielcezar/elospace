@@ -53,6 +53,15 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQSFGG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <div class="menu-mobile">
+    <nav class="mainMenu">
+      <a class="menuBtn mobile">
+        <span class="lines"></span>
+      </a>
+      <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
+    </nav>
+  </div>
+
   <div class="top-message">
     <div class="container">
       <p>Escritório Virtual - Endereço Fiscal e Endereço Comercial no melhor coworking em Curitiba! A partir de R$ 79/mês* na modalidade anual (pagamento único de R$ 950,00*). <a href="<?php echo site_url(); ?>/contato" class="btn">Saiba Mais</a></p>
@@ -62,17 +71,14 @@
   <header>
     <div class="container">
       <h1><a href="<?php echo site_url(); ?>">EloSpace</a></h1>
-      <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
 
-      <a class="menuBtn">
+      <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
+      <?php wp_nav_menu(array('theme_location' => 'secundario'));
+      ?>
+
+      <a class="menuBtn header">
         <span class="lines"></span>
       </a>
-      <div class="menu-mobile">
-        <div class="mainContainer">
-          <nav class="mainMenu">
-            <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
-          </nav>
-        </div>
-      </div>
+
     </div>
   </header>

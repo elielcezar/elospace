@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <div id="masthead">
-  <img src="<?php the_field('banner_topo'); ?>" alt="">
+<img src="<?php the_field('banner_topo'); ?>" alt="" class="desktop">
+  <img src="<?php the_field('banner_topo_mobile'); ?>" alt="" class="mobile">
 </div>
 
 <div id="principal">
@@ -12,6 +13,7 @@
         <div class="col-1">
           <h2>Sobre o Curso</h2>
           <p><strong>Data:</strong> <?php the_field('data'); ?></p>
+          <p><strong>Horário:</strong> <?php the_field('horario'); ?></p>
           <p><strong>Local:</strong> <?php the_field('local'); ?></p>
           <p><strong>Duração:</strong> <?php the_field('duracao'); ?></p>
           <p><strong>Valor:</strong> <?php the_field('valor'); ?></p>

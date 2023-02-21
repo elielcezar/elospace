@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Cursos
+Template Name: Eventos
 */
 //the content of page.php and now you can do what you want.
 ?>
@@ -17,7 +17,7 @@ Template Name: Cursos
   <div class="container">
     <?php
     $loop = new WP_Query(array(
-      'post_type' => 'curso',
+      'post_type' => 'evento',
       'order'    => 'ASC'
     ));
     if ($loop->have_posts()) :
@@ -32,8 +32,7 @@ Template Name: Cursos
             <h2><?php the_title(); ?></h2>
             <p><strong>Data:</strong> <?php the_field('data'); ?></p>
             <p><strong>Horário:</strong> <?php the_field('horario'); ?></p>
-            <p><strong>Local:</strong> <?php the_field('local'); ?></p>
-            <p><strong>Duração:</strong> <?php the_field('duracao'); ?></p>
+            <p><strong>Local:</strong> <?php the_field('local'); ?></p>            
             <p><?php the_field('infos_adicionais'); ?></p>
             <p><a href="<?php the_permalink(); ?>" class="btn">
                 Saiba mais <i class="fa-solid fa-right-long"></i>
