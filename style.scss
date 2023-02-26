@@ -581,37 +581,22 @@ header {
   width: 100%;
   background-size: 100% auto;
   background-position: top center;
-  background-repeat: no-repeat;
-  //text-indent: -5000em;
+  background-repeat: no-repeat;  
 
   &.desktop {
-    .item {
-      height: 39vw;
-      background-position: center;
-      background-size: cover;
-
-      @media(min-width:1600px) {
-        height: 33vw;
-      }
-    }
-
-    /*@media(orientation:portrait) {
+    @media(orientation:portrait){
       display: none;
-    }*/
+    }
   }
-
-  /*&.mobile {
-    .item {
-      height: 100vw;
-      margin-bottom: 25px;
-      background-position: center;
-      background-size: cover;
-    }
-
-    @media(orientation:landscape) {
+  &.mobile {
+    margin-bottom: 40px;
+    @media(orientation:landscape){
       display: none;
     }
-  }*/
+    .slick-dots{
+      display: none !important;
+    }
+  }
 
   h1 {
     display: none;
@@ -1313,6 +1298,9 @@ header {
       }
 
       ul {
+        list-style-type: square;
+        padding-left: 40px;
+        margin: 25px 0;
         li {
           margin-bottom: 10px;
         }
@@ -1338,6 +1326,16 @@ header {
     }
   }
 }
+
+/*--- CURSOS ------------------------------------------------------------------------------------------*/
+/*.page-template-page-eventos{
+  #principal{
+    .container{
+      max-width: 900px;
+    }
+  }
+}*/
+
 
 /*--- PRODUTO e EVENTO INDIVIDUAL ------------------------------------------------------------------------------------------*/
 .single-produto {
@@ -1491,10 +1489,15 @@ header {
       flex-direction: column;
     }
 
+
+
     ul {
+        list-style-type: square;
+        padding-left: 30px;
+        margin: 25px 0;
       li {
         font-size: 18px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
       }
     }
 
@@ -1662,7 +1665,7 @@ header {
       display: flex;
       margin-bottom: 50px;
       padding: 25px;
-      background: #fff;
+      background: $laranja1;
       border-radius: 10px;
       text-align: left;
 
@@ -1691,18 +1694,23 @@ header {
             position: relative;
             text-align: left;
             padding: 2% 0;
-            border-bottom: 1px solid $laranja1;
+            color: #fff;
+            border-bottom: 1px solid #fff;
 
             @media (max-width: 767px) {
               font-size: 16px;
             }
           }
 
+          p{
+            color: #fff;
+          }
+
           p.accordion {
             display: inline-block;
             color: #fff;
             font-weight: bold;
-            background: $laranja1;
+            background: $preto;
             border-radius: 5px;
             padding: 5px 10px;
             cursor: pointer;
@@ -1739,7 +1747,47 @@ header {
             font-size: 16px;
             line-height: 26px;
           }
+
+          .logos{            
+            display: flex;
+            flex-wrap: wrap;            
+            justify-content: space-around;
+
+
+            img{
+              max-width: 30%;
+              margin: 1.5%;
+
+              @media(orientation:portrait){
+                max-width: 46%;
+                margin: 2%;
+              }
+            }
+          }
         }
+       
+      }
+
+      &.active{
+        background: #fff;
+
+        .col-2{
+          .itens-accordion{
+            h3{
+              color: $preto;
+              border-bottom: 1px solid $laranja1;
+            }
+            p{
+              color: $preto;
+            }
+            p.accordion{
+              background: $laranja1;
+              color: #fff;
+            }
+          }
+        }
+
+       
       }
     }
   }

@@ -13,40 +13,30 @@ Template Name: Homepage Custom
 
   if (count($images)) :
     foreach ($images as $image) :
-      $title = $image['title'];
-      $caption = $image['caption'];
-      $full_image_url = $image['full_image_url']; //Full size image url            
-      $url = $image['url']; //Goto any link when clicked                        
+      $full_image_url = $image['full_image_url'];
+      $url = $image['url'];
   ?>
-  <div class="item" style="background-image: url(<?php echo $full_image_url; ?>)">
-    <div class="content">
-      <h1><?php echo $title; ?></h1>
-      <p><?php echo $caption; ?></p>
-    </div>
+  <div class="item">
+    <a href="<?php echo $url; ?>"><img src="<?php echo $full_image_url; ?>" alt=""></a>
   </div>
   <?php endforeach;
   endif; ?>
 </section>
 
-<!--section class="banners top mobile carrossel">
+<section class="banners top mobile carrossel">
   <?php
   $images = acf_photo_gallery('banner-mobile', $post->ID);
   if (count($images)) :
     foreach ($images as $image) :
-      $title = $image['title'];
-      $caption = $image['caption'];
-      $full_image_url = $image['full_image_url']; //Full size image url            
-      $url = $image['url']; //Goto any link when clicked                        
+      $full_image_url = $image['full_image_url'];
+      $url = $image['url'];
   ?>
-  <div class="item" style="background-image: url(<?php echo $full_image_url; ?>)">
-    <div class="content">
-      <h1><?php echo $title; ?></h1>
-      <p><?php echo $caption; ?></p>
-    </div>
+  <div class="item">
+    <a href="<?php echo $url; ?>"><img src="<?php echo $full_image_url; ?>" alt=""></a>
   </div>
   <?php endforeach;
   endif; ?>
-</section-->
+</section>
 
 <section id="principal">
 
@@ -233,7 +223,7 @@ Template Name: Homepage Custom
   </div>
 
   <?php //the_content(); 
-  ?>
+    ?>
 
 
 </section>

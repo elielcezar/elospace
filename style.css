@@ -624,36 +624,26 @@ header .container .menu-menu-secundario-container {
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
-  /*&.mobile {
-    .item {
-      height: 100vw;
-      margin-bottom: 25px;
-      background-position: center;
-      background-size: cover;
-    }
-
-    @media(orientation:landscape) {
-      display: none;
-    }
-  }*/
 }
 
-.top.desktop {
-  /*@media(orientation:portrait) {
-      display: none;
-    }*/
-}
-
-.top.desktop .item {
-  height: 39vw;
-  background-position: center;
-  background-size: cover;
-}
-
-@media (min-width: 1600px) {
-  .top.desktop .item {
-    height: 33vw;
+@media (orientation: portrait) {
+  .top.desktop {
+    display: none;
   }
+}
+
+.top.mobile {
+  margin-bottom: 40px;
+}
+
+@media (orientation: landscape) {
+  .top.mobile {
+    display: none;
+  }
+}
+
+.top.mobile .slick-dots {
+  display: none !important;
 }
 
 .top h1 {
@@ -1546,6 +1536,13 @@ header .container .menu-menu-secundario-container {
   margin: 0 0 10px 0;
 }
 
+.page-template-page-cursos .curso .col-2 ul,
+.page-template-page-eventos .curso .col-2 ul {
+  list-style-type: square;
+  padding-left: 40px;
+  margin: 25px 0;
+}
+
 .page-template-page-cursos .curso .col-2 ul li,
 .page-template-page-eventos .curso .col-2 ul li {
   margin-bottom: 10px;
@@ -1574,6 +1571,14 @@ header .container .menu-menu-secundario-container {
   background: #f97000;
 }
 
+/*--- CURSOS ------------------------------------------------------------------------------------------*/
+/*.page-template-page-eventos{
+  #principal{
+    .container{
+      max-width: 900px;
+    }
+  }
+}*/
 /*--- PRODUTO e EVENTO INDIVIDUAL ------------------------------------------------------------------------------------------*/
 .single-produto #masthead {
   background: #333 url(img/bg-masthead.jpg) top center no-repeat;
@@ -1759,10 +1764,17 @@ header .container .menu-menu-secundario-container {
   }
 }
 
+.single-curso .informacoes ul,
+.single-evento .informacoes ul {
+  list-style-type: square;
+  padding-left: 30px;
+  margin: 25px 0;
+}
+
 .single-curso .informacoes ul li,
 .single-evento .informacoes ul li {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .single-curso .informacoes p,
@@ -1982,7 +1994,7 @@ header .container .menu-menu-secundario-container {
   display: flex;
   margin-bottom: 50px;
   padding: 25px;
-  background: #fff;
+  background: #f97000;
   border-radius: 10px;
   text-align: left;
 }
@@ -2024,7 +2036,8 @@ header .container .menu-menu-secundario-container {
   position: relative;
   text-align: left;
   padding: 2% 0;
-  border-bottom: 1px solid #f97000;
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
 
 @media (max-width: 767px) {
@@ -2034,12 +2047,17 @@ header .container .menu-menu-secundario-container {
   }
 }
 
+.single-curso #fornecedores .fornecedor .col-2 .itens-accordion p,
+.single-evento #fornecedores .fornecedor .col-2 .itens-accordion p {
+  color: #fff;
+}
+
 .single-curso #fornecedores .fornecedor .col-2 .itens-accordion p.accordion,
 .single-evento #fornecedores .fornecedor .col-2 .itens-accordion p.accordion {
   display: inline-block;
   color: #fff;
   font-weight: bold;
-  background: #f97000;
+  background: #333;
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
@@ -2080,6 +2098,53 @@ header .container .menu-menu-secundario-container {
 .single-evento #fornecedores .fornecedor .col-2 .itens-accordion li {
   font-size: 16px;
   line-height: 26px;
+}
+
+.single-curso #fornecedores .fornecedor .col-2 .itens-accordion .logos,
+.single-evento #fornecedores .fornecedor .col-2 .itens-accordion .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.single-curso #fornecedores .fornecedor .col-2 .itens-accordion .logos img,
+.single-evento #fornecedores .fornecedor .col-2 .itens-accordion .logos img {
+  max-width: 30%;
+  margin: 1.5%;
+}
+
+@media (orientation: portrait) {
+  .single-curso #fornecedores .fornecedor .col-2 .itens-accordion .logos img,
+  .single-evento #fornecedores .fornecedor .col-2 .itens-accordion .logos img {
+    max-width: 46%;
+    margin: 2%;
+  }
+}
+
+.single-curso #fornecedores .fornecedor.active,
+.single-evento #fornecedores .fornecedor.active {
+  background: #fff;
+}
+
+.single-curso #fornecedores .fornecedor.active .col-2 .itens-accordion h3,
+.single-evento #fornecedores .fornecedor.active .col-2 .itens-accordion h3 {
+  color: #333;
+  border-bottom: 1px solid #f97000;
+}
+
+.single-curso #fornecedores .fornecedor.active .col-2 .itens-accordion p,
+.single-evento #fornecedores .fornecedor.active .col-2 .itens-accordion p {
+  color: #333;
+}
+
+.single-curso #fornecedores .fornecedor.active .col-2 .itens-accordion p.accordion,
+.single-evento #fornecedores .fornecedor.active .col-2 .itens-accordion p.accordion {
+  background: #f97000;
+  color: #fff;
 }
 
 /*--- CONTATO ------------------------------------------------------------------------------------------*/

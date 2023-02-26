@@ -15,12 +15,17 @@
 
     $('p.accordion').click(function () {
       $p = $(this).parent();
+      $container = $(this).parents('.fornecedor');
       if ($p.hasClass('active')) {
         $p.removeClass('active');
+        $container.removeClass('active');
       } else {
+        $('.fornecedor').removeClass('active');
         $p.addClass('active');
+        $container.addClass('active');
       }
       $('.item.active').not($p).removeClass('active');
+      //$('.item.active').not($container).removeClass('active');
     });
 
     /* CARROSSEL */
