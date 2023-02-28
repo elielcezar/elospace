@@ -24,7 +24,8 @@
         $p.addClass('active');
         $container.addClass('active');
       }
-      $('.item.active').not($p).removeClass('active');      
+      $('.item.active').not($p).removeClass('active');
+      //$('.item.active').not($container).removeClass('active');
     });
 
     /* CARROSSEL */
