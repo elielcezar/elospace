@@ -2,18 +2,29 @@
   $(document).ready(function () {
     const w = window.innerWidth;
     const h = window.innerHeight;
-    const mobile = w < h;
+    const mobile = w < 1300;
     const desktop = h < w;
     const menuMobile = document.querySelector('.menu-mobile .mainMenu');
+    
+    window.onresize = function(){ 
+      const newW = window.innerWidth;
+      if(newW != w){
+        location.reload(); 
+      }      
+    };
 
     $('p.accordion').click(function () {
       $p = $(this).parent();
+      $container = $(this).parents('.fornecedor');
       if ($p.hasClass('active')) {
         $p.removeClass('active');
+        $container.removeClass('active');
       } else {
+        $('.fornecedor').removeClass('active');
         $p.addClass('active');
+        $container.addClass('active');
       }
-      $('.item.active').not($p).removeClass('active');
+      $('.item.active').not($p).removeClass('active');      
     });
 
     /* CARROSSEL */
@@ -52,33 +63,33 @@
       protect: true,
     });
 
-    /* botão do menu */
-    $('.menuBtn').click(function () {
-      $(this).toggleClass('act');
-      if ($(this).hasClass('act')) {
-        $('.mainMenu').addClass('act');
-      } else {
-        $('.mainMenu').removeClass('act');
-      }
-    });
-
     document.addEventListener( 'wpcf7submit', function( event ) {
       console.log('teste');
       location = 'https://www.elospace.com.br/contato-enviado-com-sucesso/';
     }, false );
 
-    /*if (mobile) {
-      $('<a/>', {
-        class: 'voltar',
-        text: 'Voltar',
-      }).prependTo('.menu-item-has-children .sub-menu');      
-      $('li.menu-item-has-children > a').click(function (e) {
-        e.preventDefault();
-        $('ul#menu-menu-1').addClass('slide on');
+    if (mobile) {
+      $('.menu-menu-secundario-container').appendTo('.menu-menu-principal-container').show();
+
+      /* botão do menu */
+      $('.menuBtn').click(function () {
+        $('.menuBtn').toggleClass('act');
+        if ($('.menuBtn').hasClass('act')) {
+          $('.mainMenu').addClass('act');
+        } else {
+          $('.mainMenu').removeClass('act');
+        }
       });
-      $('.sub-menu .voltar').click(function () {
-        $('ul#menu-menu-1').removeClass('slide on');
+    }else{
+      /* botão do menu */
+      $('.menuBtn').click(function () {
+        $(this).toggleClass('act');
+        if ($(this).hasClass('act')) {
+          $('.menu-menu-secundario-container').addClass('act');
+        } else {
+          $('.menu-menu-secundario-container').removeClass('act');
+        }
       });
-    }*/
+    }
   });
 })(jQuery);

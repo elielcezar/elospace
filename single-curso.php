@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <div id="masthead">
-  <img src="<?php the_field('banner_topo'); ?>" alt="">
+<img src="<?php the_field('banner_topo'); ?>" alt="" class="desktop">
+  <img src="<?php the_field('banner_topo_mobile'); ?>" alt="" class="mobile">
 </div>
 
 <div id="principal">

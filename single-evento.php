@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <div id="masthead">
-  <img src="<?php the_field('banner_topo'); ?>" alt="">
+  <img src="<?php the_field('banner_topo'); ?>" alt="" class="desktop">
+  <img src="<?php the_field('banner_topo_mobile'); ?>" alt="" class="mobile">
 </div>
 
 <div id="principal">
@@ -45,60 +46,6 @@
         endif;
       ?>      
 
-      <?php    /*    
-        if( have_rows('fornecedores') ):
-            
-            while( have_rows('logos') ) : the_row();                
-                $logo = get_sub_field('logo_foto');
-                $nome = get_sub_field('nome');                
-                $fornecedor = get_sub_field('quem_e_o_fornecedor');      
-                $quem_atende = get_sub_field('quem_atende');      
-                $size = 'full';
-      ?>
-         <div class="informacoes logos">
-            <div class="col-1">
-              <h3><?php echo $titulo; ?></h3>
-            </div>
-            <div class="col-2">
-
-              <?php foreach( $fornec as $logo ): ?>                  
-                <img src="<?php echo $logo; ?>" alt="">
-              <?php endforeach; ?>
-
-            </div>
-          </div>
-
-      <?php endwhile;
-        else :            
-        endif;
-      ?>
-
-      <?php        
-        if( have_rows('logos') ):
-            
-            while( have_rows('logos') ) : the_row();                
-                $titulo = get_sub_field('titulo');
-                $lista_logos = get_sub_field('lista_logos');                
-                $size = 'full';
-      ?>
-         <div class="informacoes logos">
-            <div class="col-1">
-              <h3><?php echo $titulo; ?></h3>
-            </div>
-            <div class="col-2">
-
-              <?php foreach( $lista_logos as $logo ): ?>                  
-                <img src="<?php echo $logo; ?>" alt="">
-              <?php endforeach; ?>
-
-            </div>
-          </div>
-
-      <?php endwhile;
-        else :            
-        endif;
-      */?>
-
     </div>
   </div>
 </div>
@@ -131,15 +78,15 @@
                 <p><?php echo $resumo; ?></p>
                 <p class="accordion">Saiba Mais</p>
                 <div class="accordion">
-                  <?php echo $fornecedor; ?>    
-
+                  <?php echo $fornecedor; ?>                  
                   <?php if($quem_atende){ ?>
                     <p><strong>Quem Atende:</strong></p>
-                    <?php foreach( $quem_atende as $logo ): ?>                  
-                      <img src="<?php echo $logo; ?>" alt="">
-                    <?php endforeach; ?>   
-                  <?php } ?>   
-                              
+                    <div class="logos">
+                      <?php foreach( $quem_atende as $logo ): ?>                  
+                        <img src="<?php echo $logo; ?>" alt="">
+                      <?php endforeach; ?>   
+                    </div>
+                  <?php } ?>               
                 </div>
               </div>
             </div>
