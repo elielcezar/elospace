@@ -1149,107 +1149,6 @@ header {
   }
 }
 
-
-/*--- SALAS DE REUNIÕES ------------------------------------------------------------------------------------------*/
-.postid-58 {
-  #masthead {
-    background: $preto url(img/sala-reuniao.jpg) top center no-repeat;
-    background-size: cover;
-  }
-
-  #principal {
-
-    .conteudo {
-      margin-bottom: 75px;
-
-      @media(orientation:portrait) {
-        flex-direction: column-reverse;
-      }
-
-      .col-2 {
-        @media(orientation:portrait) {
-          margin: 0 0 20px 0;
-        }
-      }
-
-      h2,
-      h3 {
-        margin: 0;
-      }
-
-      p.preco {
-        width: 100%;
-        padding: 10px;
-        display: inline-block;
-        background: #f5f5f5;
-      }
-
-      ul {
-        li {
-          margin-bottom: 10px;
-        }
-      }
-    }
-  }
-}
-
-/*--- SALA PRIVATIVA ------------------------------------------------------------------------------------------*/
-.postid-19 {
-  #masthead {
-    background: $preto url(img/sala-pvt.jpg) top center no-repeat;
-    background-size: cover;
-  }
-
-  #principal {
-
-    .conteudo {
-      margin-bottom: 75px;
-
-      @media(orientation:portrait) {
-        flex-direction: column-reverse;
-        margin-bottom: 0;
-      }
-
-      .col-2 {
-        @media(orientation:portrait) {
-          margin: 0 0 20px 0;
-        }
-      }
-
-      h2,
-      h3 {
-        margin: 0;
-      }
-
-      p.preco {
-        width: 100%;
-        padding: 10px;
-        display: inline-block;
-        background: #f5f5f5;
-      }
-
-      ul {
-        li {
-          margin-bottom: 10px;
-        }
-      }
-    }
-  }
-}
-
-
-/*--- ENDEREÇO COMERCIAL ------------------------------------------------------------------------------------------*/
-.postid-24 {
-  #masthead {
-    background: $preto url(img/end-fiscal.jpg) top center no-repeat;
-    background-size: cover;
-  }
-
-  .conteudo {
-    margin-bottom: 75px;
-  }
-}
-
 /*--- CURSOS/EVENTOS ------------------------------------------------------------------------------------------*/
 .page-template-page-cursos,
 .page-template-page-eventos {
@@ -1326,16 +1225,6 @@ header {
     }
   }
 }
-
-/*--- CURSOS ------------------------------------------------------------------------------------------*/
-/*.page-template-page-eventos{
-  #principal{
-    .container{
-      max-width: 900px;
-    }
-  }
-}*/
-
 
 /*--- PRODUTO e EVENTO INDIVIDUAL ------------------------------------------------------------------------------------------*/
 .single-produto {
@@ -1455,6 +1344,105 @@ header {
 }
 
 
+/*--- SALAS DE REUNIÕES ------------------------------------------------------------------------------------------*/
+.postid-58 {
+  #masthead {
+    background: $preto url(img/sala-reuniao.jpg) top center no-repeat;
+    background-size: cover;
+  }
+
+  #principal {
+
+    .conteudo {
+      margin-bottom: 75px;
+
+      @media(orientation:portrait) {
+        flex-direction: column-reverse;
+      }
+
+      .col-2 {
+        @media(orientation:portrait) {
+          margin: 0 0 20px 0;
+        }
+      }
+
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      p.preco {
+        width: 100%;
+        padding: 10px;
+        display: inline-block;
+        background: #f5f5f5;
+      }
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+/*--- SALA PRIVATIVA ------------------------------------------------------------------------------------------*/
+.postid-19 {
+  #masthead {
+    background: $preto url(img/sala-pvt.jpg) top center no-repeat;
+    background-size: cover;
+  }
+
+  #principal {
+
+    .conteudo {
+      margin-bottom: 75px;
+
+      @media(orientation:portrait) {
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+      }
+
+      .col-2 {
+        @media(orientation:portrait) {
+          margin: 0 0 20px 0;
+        }
+      }
+
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      p.preco {
+        width: 100%;
+        padding: 10px;
+        display: inline-block;
+        background: #f5f5f5;
+      }
+
+      ul {
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+/*--- ENDEREÇO COMERCIAL ------------------------------------------------------------------------------------------*/
+.postid-24 {
+  #masthead {
+    background: $preto url(img/end-fiscal.jpg) top center no-repeat;
+    background-size: cover;
+  }
+
+  .conteudo {
+    margin-bottom: 75px;
+  }
+}
 
 /*--- CURSO INDIVIDUAL ----------------------------------------------------------------------------------*/
 .single-curso,
