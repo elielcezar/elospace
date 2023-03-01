@@ -182,7 +182,7 @@ Template Name: Homepage Custom
     <div class="container">
       <div class="content">
         <h3>O jeito prático, inteligente e econômico de compartilhar conhecimento.</h3>
-        <a href="<?php echo site_url(); ?>/eventos" class="btn">Conheça nossa área de cursos e eventos</a>
+        <a href="<?php echo site_url(); ?>/eventos" class="btn">Confira nossos próximos eventos</a>
       </div>
     </div>
   </div>

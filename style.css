@@ -791,9 +791,6 @@ header .container .menu-menu-secundario-container {
     margin-left: 0%;
   }
 }
-.page-template-front-page #eventos {
-  display: none;
-}
 .page-template-front-page #eventos .content {
   background: #333 url(img/bg-eventos.jpg) center -172px no-repeat;
   padding: 50px;
@@ -826,6 +823,9 @@ header .container .menu-menu-secundario-container {
   background: #f97000;
 }
 
+#depoimentos {
+  display: none;
+}
 #depoimentos .content {
   background: #ff9900;
   padding: 25px 50px;
@@ -1233,9 +1233,19 @@ header .container .menu-menu-secundario-container {
 }
 .single-produto #principal .conteudo .col-1 h2 {
   margin-top: 0;
+  font-size: 32px;
 }
 .single-produto #principal .conteudo .col-1 p {
   line-height: 20px;
+}
+.single-produto #principal .conteudo .col-1 ul {
+  list-style-type: square;
+  padding-left: 30px;
+  margin: 25px 0;
+}
+.single-produto #principal .conteudo .col-1 ul li {
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 .single-produto #principal .conteudo .col-2 {
   width: 50%;

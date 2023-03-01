@@ -883,8 +883,7 @@ header {
     }
   }
 
-  #eventos {
-    display: none;
+  #eventos {    
 
     .content {
       background: $preto url(img/bg-eventos.jpg) center -172px no-repeat;
@@ -924,6 +923,7 @@ header {
 }
 
 #depoimentos {
+  display: none;
   .content {
     background: #ff9900;
     padding: 25px 50px;
@@ -1254,10 +1254,21 @@ header {
 
         h2 {
           margin-top: 0;
+          font-size: 32px;
         }
 
         p {
           line-height: 20px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 30px;
+            margin: 25px 0;
+          li {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
         }
       }
 
