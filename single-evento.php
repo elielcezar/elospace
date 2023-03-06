@@ -13,6 +13,7 @@
         <div class="col-1">
           <h2>Sobre o Evento</h2>
           <p><strong>Data:</strong> <?php the_field('data'); ?></p>
+          <p><strong>Horário:</strong> <?php the_field('horario'); ?></p>
           <p><strong>Local:</strong> <?php the_field('local'); ?></p>
           <p><strong>Valor:</strong> <?php the_field('valor'); ?></p>
           <p><?php the_field('infos_adicionais'); ?></p>
