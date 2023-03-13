@@ -5,6 +5,24 @@
   <img src="<?php the_field('banner_topo_mobile'); ?>" alt="" class="mobile">
 </div>
 
+<?php
+if( get_field('contador')):?>
+<div id="contador">
+  <div class="container">
+    <h3>Faltam</h3>    
+    <div id="datePicker"><?php the_field('contador'); ?></div>
+    <div id="countdown">
+      <div class="item"><span id="days"></span> dias</div>
+      <div class="item"><span id="hours"></span> horas</div>
+      <div class="item"><span id="minutes"></span> minutos</div>
+      <div class="item"><span id="seconds"></span> segundos</div>
+    </div>
+  </div>
+</div>
+<?php  
+  endif;
+?>      
+
 <div id="principal">
   <div class="container">
     <div class="conteudo">

@@ -28,7 +28,7 @@
     <div class="col-3">
       <h5>Institucional</h5>
       <ul>
-        <li><a href="<?php echo site_url(); ?>/sobre/">Sobre a Elospace</a></li>
+        <li><a href="<?php echo site_url(); ?>/sobre/">Sobre o Elospace</a></li>
         <li><a href="<?php echo site_url(); ?>/contato/">Contato</a></li>
       </ul>
     </div>

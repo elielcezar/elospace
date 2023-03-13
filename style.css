@@ -1393,10 +1393,77 @@ header .container .menu-menu-secundario-container {
   margin-bottom: 75px;
 }
 
-/*--- CURSO INDIVIDUAL ----------------------------------------------------------------------------------*/
+/*--- CURSO / EVENTO INDIVIDUAL ----------------------------------------------------------------------------------*/
 .single-curso,
 .single-evento {
   /*------*/
+}
+.single-curso #contador,
+.single-evento #contador {
+  background: #000;
+  font-weight: 700;
+  padding: 10px 0 12px 0;
+  color: #fff;
+}
+@media (orientation: portrait) {
+  .single-curso #contador,
+  .single-evento #contador {
+    margin-bottom: 40px;
+  }
+}
+.single-curso #contador .container,
+.single-evento #contador .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (orientation: portrait) {
+  .single-curso #contador .container,
+  .single-evento #contador .container {
+    padding: 2% 5%;
+  }
+}
+.single-curso #contador .container h3,
+.single-evento #contador .container h3 {
+  margin: 0;
+  font-size: 21px;
+}
+@media (orientation: portrait) {
+  .single-curso #contador .container h3,
+  .single-evento #contador .container h3 {
+    margin-right: 25px;
+  }
+}
+.single-curso #contador .container #datePicker,
+.single-evento #contador .container #datePicker {
+  display: none;
+}
+.single-curso #contador .container #countdown,
+.single-evento #contador .container #countdown {
+  display: flex;
+}
+@media (orientation: portrait) {
+  .single-curso #contador .container #countdown,
+  .single-evento #contador .container #countdown {
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+  }
+}
+.single-curso #contador .container #countdown .item,
+.single-evento #contador .container #countdown .item {
+  margin: 0 10px;
+}
+@media (orientation: portrait) {
+  .single-curso #contador .container #countdown .item,
+  .single-evento #contador .container #countdown .item {
+    flex: 50%;
+    margin: 0;
+  }
+}
+.single-curso #contador .container #countdown .item span,
+.single-evento #contador .container #countdown .item span {
+  font-size: 21px;
 }
 .single-curso #masthead,
 .single-evento #masthead {

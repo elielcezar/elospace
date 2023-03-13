@@ -1455,9 +1455,66 @@ header {
   }
 }
 
-/*--- CURSO INDIVIDUAL ----------------------------------------------------------------------------------*/
+/*--- CURSO / EVENTO INDIVIDUAL ----------------------------------------------------------------------------------*/
 .single-curso,
 .single-evento {
+  #contador{
+    background: #000;
+    font-weight: 700;
+    padding: 10px 0 12px 0;
+    color: #fff;
+
+    @media(orientation:portrait){
+      margin-bottom: 40px;
+    }
+
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media(orientation:portrait){
+        padding: 2% 5%;
+      }
+
+      h3{
+        margin: 0;
+        font-size: 21px;
+
+        @media(orientation:portrait){
+          margin-right: 25px;
+        }
+      }
+
+      #datePicker{
+        display: none;
+      }
+
+      #countdown{
+        display: flex;
+
+        @media(orientation:portrait){
+          flex-wrap: wrap;
+          text-align: left;
+          align-items: center;
+        }
+
+        .item{
+          margin: 0 10px;
+
+          @media(orientation:portrait){
+            flex: 50%;
+            margin: 0;
+          }
+
+          span{
+            font-size: 21px;
+          }
+        }
+      }
+    }
+  }
+
   #masthead {
     height: auto;
 
